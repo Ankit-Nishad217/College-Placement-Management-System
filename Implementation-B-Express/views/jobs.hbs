@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Jobs</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Placement Portal</div>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/companies">Companies</a>
+            <a href="/students">Students</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Job Openings</h1>
+
+        <div class="info">
+
+            <h2>{{company}}</h2>
+
+            <p>Available job opportunities:</p>
+
+            <ul>
+
+                {{#each jobs}}
+
+                    <li>{{this}}</li>
+
+                {{/each}}
+
+            </ul>
+
+            {{#if jobs}}
+
+                <p>
+                    These job openings are currently available.
+                </p>
+
+            {{else}}
+
+                <p>
+                    No job openings are available.
+                </p>
+
+            {{/if}}
+
+            <a class="btn" href="/companies">
+                ← Back to Companies
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        College Placement Management System
+    </div>
+
+</body>
+</html>
