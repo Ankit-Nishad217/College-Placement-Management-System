@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Companies</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Placement Portal</div>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/companies">Companies</a>
+            <a href="/students">Students</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Participating Companies</h1>
+
+        <p>Companies offering placement opportunities.</p>
+
+        <div class="card-container">
+
+            {{#each companies}}
+
+            <div class="card">
+
+                <h2>{{name}}</h2>
+
+                <p>
+                    <strong>Location:</strong> {{location}}
+                </p>
+
+                <p>
+                    <strong>Job Openings:</strong> {{jobs.length}}
+                </p>
+
+                <a href="/company/{{id}}">
+                    View Company Details →
+                </a>
+
+            </div>
+
+            {{/each}}
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        College Placement Management System
+    </div>
+
+</body>
+</html>
