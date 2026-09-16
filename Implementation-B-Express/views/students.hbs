@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Placement Portal</div>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/companies">Companies</a>
+            <a href="/students">Students</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Registered Students</h1>
+
+        <p>Students registered for the college placement process.</p>
+
+        <div class="card-container">
+
+            {{#each students}}
+
+            <div class="card">
+
+                <h2>{{name}}</h2>
+
+                <p>
+                    <strong>Course:</strong> {{course}}
+                </p>
+
+                <p>
+                    <strong>Status:</strong> {{status}}
+                </p>
+
+                <p>
+                    <strong>Company:</strong> {{company}}
+                </p>
+
+                <a href="/student/{{id}}">
+                    View Student Details →
+                </a>
+
+            </div>
+
+            {{/each}}
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        College Placement Management System
+    </div>
+
+</body>
+</html>
