@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="logo">Placement Portal</div>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/companies">Companies</a>
+            <a href="/students">Students</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Student Details</h1>
+
+        <div class="info">
+
+            <h2>{{name}}</h2>
+
+            <p>
+                <strong>Course:</strong> {{course}}
+            </p>
+
+            <p>
+                <strong>Status:</strong> {{status}}
+            </p>
+
+            <p>
+                <strong>Company:</strong> {{company}}
+            </p>
+
+            {{#if company}}
+
+                <p>
+                    This student has been placed successfully.
+                </p>
+
+            {{else}}
+
+                <p>
+                    This student has not been placed yet.
+                </p>
+
+            {{/if}}
+
+            <a class="btn" href="/students">
+                ← Back to Students
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        College Placement Management System
+    </div>
+
+</body>
+</html>
